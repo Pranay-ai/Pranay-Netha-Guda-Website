@@ -1,4 +1,4 @@
-import resumefile from '../assets/GudaPranayNetha_Resume.pdf';
+import resumefile from '/GudaPranayNetha_Resume.pdf';
 export default function Resume() {
     return (
 

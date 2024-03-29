@@ -1,10 +1,9 @@
 import ProjectCard from "./ProjectCard";
-import reactImage from "../assets/react.svg";
-import leftArrow from "../assets/left-arrow-svgrepo-com (1).svg";
-import sentimentImage from "../assets/sentiment_analysis_web_app.jpg";
-import blogImage from "../assets/blog_summarization_app.jpg";
-import todoImg from "../assets/react_todo_list_app.jpg";
-import noisyImage from "../assets/gan_clean_noisy_image_pair.jpg";
+import leftArrow from "/left-arrow-svgrepo-com (1).svg";
+import sentimentImage from "/sentiment_analysis_web_app.jpg";
+import blogImage from "/blog_summarization_app.jpg";
+import todoImg from "/react_todo_list_app.jpg";
+import noisyImage from "/gan_clean_noisy_image_pair.jpg";
 import {useState} from "react";
 export default function ProjectSection() {
     const data=[

@@ -1,8 +1,8 @@
 import React from 'react';
-import reactImg from '../assets/pranay.jpg';
-import github from '../assets/github-mark.png';
-import linkedln from '../assets/linkedln.png';
-import leetcode from '../assets/leetcode.svg';
+import reactImg from '/pranay.jpg';
+import github from '/github-mark.png';
+import linkedln from '/linkedln.png';
+import leetcode from '/leetcode.svg';
 
 export default function About() {
     return (
