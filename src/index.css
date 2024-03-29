@@ -1,0 +1,677 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    background-color: #a3a3a3;
+
+
+
+}
+
+
+/* Base styles */
+/* Base styles for desktop */
+.desktopNavBar {
+    background: linear-gradient(to right, #f9d4da, #d7e8f9);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    height: 7vh;
+}
+
+.desktopNavBar p {
+    font-weight: bold;
+    margin: 0;
+    font-size: x-large;
+}
+
+.desktopNavBar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.desktopNavBar li {
+    margin-right: 15px;
+}
+
+.desktopNavBar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.desktopNavBar button:hover {
+    background-color: aliceblue;
+}
+
+/* Mobile Styles */
+.mobileNavBar {
+    background: linear-gradient(to right, #f9d4da, #d7e8f9);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.menuToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menuIcon {
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    position: relative;
+}
+
+.menuIcon::before, .menuIcon::after {
+    content: '';
+    background-color: black;
+    width: 30px;
+    height: 3px;
+    display: block;
+    position: absolute;
+    left: 0;
+}
+
+.menuIcon::before {
+    top: -10px;
+}
+
+.menuIcon::after {
+    top: 10px;
+}
+
+.mobileMenu {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.mobileMenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mobileMenu li + li {
+    margin-top: 10px;
+}
+
+.mobileMenu button {
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+}
+
+.mobileMenu button:hover {
+    text-decoration: underline;
+}
+
+
+
+
+.AboutSection{
+    background: linear-gradient(135deg, #c7a9e9, #a1c4fd);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    height: 87vh;
+}
+.About {
+    display: flex;
+    flex-direction: row; /* Stack elements vertically on small screens */
+    align-items: center; /* Center-align items for a neat look */
+    justify-content: space-between;
+    padding: 5%; /* Adjust padding for smaller screens */
+    
+}
+
+.About img {
+    /* width: 80%; Scale image based on screen width */
+    max-width: 400px; /* Ensure it doesn't grow too large on wider screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15%;
+    margin-bottom: 20px; /* Add some space between image and text */
+    box-shadow: 0 2px 5px rgba(129, 52, 52, 0.15);
+}
+
+
+.aboutme, .WebsiteLinks {
+    /* width: 100%; Utilize full width for better readability */
+    text-align: center; /* Center-align text for consistency */
+}
+
+.aboutme p {
+    font-size: 1.5rem; /* Adjust text size for readability */
+    font-weight: bold; /* Emphasize text */
+
+}
+
+.aboutme p, .aboutme h1, .WebsiteLinks a {
+    margin: 10px 0; /* Add some vertical spacing */
+}
+
+.aboutme{
+    width: 50%;
+}
+
+.WebsiteLinks {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Stack links vertically */
+    justify-content: space-around; /* Space links evenly */
+    font-size: 1.5rem; /* Adjust text size for readability */
+}
+
+.linkButton {
+    display: inline-flex; /* Make links flex containers to align icon and text */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    background: none;
+    border: 1px solid transparent; /* Add border to highlight on hover */
+    border-radius: 5px; /* Soften the edges */
+    padding: 10px;
+    margin: 5px 0; /* Add some space between links */
+    width: auto; /* Allow the link to grow with content */
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.linkButton img {
+    width: 24px; /* Ensure icons are not too large */
+    height: 24px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+
+/* Adjustments for very small screens */
+@media (max-width: 1000px) {
+    .About {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center; /* Center-align items for a neat look */
+        padding: 5%; /* Adjust padding for smaller screens */
+        
+    }
+    .About img {
+        width: 90%;
+    }
+
+    .aboutme p {
+        font-size: 1.2rem; /* Adjust text size for readability on small devices */
+    }
+    .AboutSection{
+        height: 90vh;
+    }
+    .aboutme{
+        width: 100%;
+    }
+    
+}
+
+
+
+
+
+
+.ProjectCard {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    /* border: 5px solid black; */
+    /* border: solid black 2px; */
+    padding: 30px 30px;
+    width: 30%;
+    border-radius: 10%;
+    background-color: #e6cfff;
+}
+
+.ProjectCard img{
+    width: 200px;
+    height: 130px;
+    border-radius: 15%;
+
+    padding: 20px 20px;
+    box-shadow: 0 2px 5px rgba(129, 52, 52, 0.15);
+}
+.ProjectCard p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ProjectSection{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 30px;
+}
+
+.ProjectDiv {
+    padding: 0 3% 0 3%;
+    display: flex;
+    flex-direction: column;
+    background-color: #44b09e;
+    background: linear-gradient(135deg, #c7a9e9, #a1c4fd);
+    height: 87vh;
+}
+
+.ProjectDiv h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.Arrow {
+    height: 100px;
+    width: 200px;
+    opacity: 0.5;
+}
+.Mirror{
+    transform: scaleX(-1);
+}
+
+.BtnArrow{
+   background: none;
+    border: none;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+.ProjectSection button{
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+/* Base styles for larger screens remain unchanged */
+
+/* Responsive adjustments for screens less than 1000px */
+@media (max-width: 1000px) {
+    .ProjectCard {
+        width:70%; /* Adjust width for smaller screens */
+        padding: 15px 15px; /* Adjust padding for a tighter layout */
+        margin: 10px 0; /* Add margin for spacing between cards */
+    }
+
+    .ProjectCard img {
+        width: 150px; /* Adjust image size for smaller screens */
+        height: 100px;
+        padding: 10px 10px; /* Adjust image padding */
+    }
+
+    .ProjectCard p {
+        font-size: 1.2rem; /* Adjust font size for better readability */
+    }
+
+    .ProjectSection {
+        flex-direction: column; /* Stack project cards vertically */
+        align-items: center; /* Center align the cards for consistency */
+        flex-wrap: nowrap;
+
+    }
+
+    .ProjectDiv {
+        padding: 0 5%; /* Adjust overall section padding */
+    }
+
+    .ProjectDiv h1 {
+        font-size: 2rem; /* Adjust heading font size for smaller screens */
+    }
+
+    .Arrow {
+        height: 70px; /* Adjust arrow icon size */
+        width: 140px;
+    }
+
+    .BtnArrow {
+        margin: 5px 0; /* Adjust margin around navigation buttons for easier interaction */
+    }
+
+    .Mirror {
+        transform: scaleX(-1); /* Ensure arrow flipping is consistent */
+    }
+
+    .BtnArrow.hidden, .BtnArrow:disabled {
+        opacity: 0.5; /* Adjust the opacity to indicate non-interactivity */
+        cursor: not-allowed; /* Change cursor to indicate disabled state */
+    }
+
+
+}
+@media (max-width: 450px) {
+    .ProjectCard {
+        width:100%; /* Adjust width for smaller screens */
+        /* padding: 15px 15px; Adjust padding for a tighter layout */
+        margin: 10px 0; /* Add margin for spacing between cards */
+    }
+    .ProjectDiv {
+        padding: 0 0%; /* Adjust overall section padding */
+    }
+
+}
+
+.Footer{
+    /* background: linear-gradient(135deg, #c7a9e9, #a1c4fd); */
+    /* padding: 20px; */
+    padding: 0 2% 0 2%;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between name and links */
+    align-items: center; /* Vertically align items */
+    font-family: 'Courier New', Courier, monospace;
+    height: 6vh;
+    color: whitesmoke;
+}
+
+.ContactSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 87vh; /* Adjust as needed */
+    background: linear-gradient(135deg, #c7a9e9, #a1c4fd);
+}
+
+.ContactMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vh;
+    height: 65vh;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 7.5%;
+    background-color: #d2d8d6;
+background-image: linear-gradient(315deg, #d2d8d6 0%, #dce8e0 74%);
+
+}
+
+@media screen and (max-width: 1000px) {
+    .ContactMe {
+        width: 100%;
+        border-radius: 0%;
+    }
+    
+}
+
+
+.ContactMe h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ContactMe input{
+    width: 60%;
+    display: block;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.ContactMe textarea{
+    width: 60%;
+    display: block;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+.ContactMe button{
+    background: none;
+    padding: 20px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.ContactMe button:hover{
+    color: darkblue;
+}
+
+span{
+    color: red;
+}
+
+
+
+.animated {
+    animation: slideIn 0.6s ease; /* Adjust timing based on your animation */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    max-width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 1000px) {
+    .container {
+        max-width: 90%;
+    }
+    
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.contact-info, .education {
+    margin-top: 40px;
+}
+
+.contact-info h2, .education h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.education-item p {
+    color: #666;
+}
+
+.technical-skills {
+    margin-top: 40px;
+}
+
+.technical-skills h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.technical-skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.technical-skills ul li {
+    margin-bottom: 10px;
+}
+
+.technical-skills ul li strong {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.experience {
+    margin-top: 40px;
+}
+
+.experience h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.experience-item p {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.experience-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.experience-item ul li {
+    margin-bottom: 5px;
+}
+
+.ResumeSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 87vh; */
+    background: linear-gradient(135deg, #c7a9e9, #a1c4fd);
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+.photoSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 87vh; */
+    background: linear-gradient(135deg, #c7a9e9, #a1c4fd);
+}
+
+.photoSection h1{
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+}
+
+.photoGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+    .photoGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+.photoGrid img{
+    width: 800px;
+    height: 550px;
+    border-radius: 15%;
+    padding: 25px 25px;
+    box-shadow: 0 2px 5px rgba(129, 52, 52, 0.15);
+}
+
+@media (max-width: 1000px) {
+    .photoGrid img {
+        width: 95vh;
+        height: 30vh;
+    }
+    
+}
+
