@@ -222,7 +222,7 @@ body{
         font-size: 1.2rem; /* Adjust text size for readability on small devices */
     }
     .AboutSection{
-        height: 90vh;
+        height: fit-content;
     }
     .aboutme{
         width: 100%;
@@ -242,7 +242,7 @@ body{
     /* border: 5px solid black; */
     /* border: solid black 2px; */
     padding: 30px 30px;
-    width: 30%;
+    width: 40%;
     border-radius: 10%;
     background-color: #e6cfff;
 }
@@ -263,9 +263,8 @@ body{
 
 .ProjectSection{
     display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-content: space-between;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
     padding: 30px 30px;
 }
@@ -276,7 +275,7 @@ body{
     flex-direction: column;
     background-color: #44b09e;
     background: linear-gradient(135deg, #c7a9e9, #a1c4fd);
-    height: 87vh;
+    height:fit-content;
 }
 
 .ProjectDiv h1{
@@ -315,7 +314,7 @@ body{
 /* Responsive adjustments for screens less than 1000px */
 @media (max-width: 1000px) {
     .ProjectCard {
-        width:70%; /* Adjust width for smaller screens */
+        width:100%; /* Adjust width for smaller screens */
         padding: 15px 15px; /* Adjust padding for a tighter layout */
         margin: 10px 0; /* Add margin for spacing between cards */
     }
@@ -331,14 +330,22 @@ body{
     }
 
     .ProjectSection {
+        display: flex;
         flex-direction: column; /* Stack project cards vertically */
         align-items: center; /* Center align the cards for consistency */
         flex-wrap: nowrap;
 
     }
+    .ArrowSection {
+        display: flex;
+        flex-direction: row; /* Stack project cards vertically */
+        align-items: center; /* Center align the cards for consistency */
+        justify-content: space-between;
+    }
 
     .ProjectDiv {
         padding: 0 5%; /* Adjust overall section padding */
+        height: fit-content;
     }
 
     .ProjectDiv h1 {
@@ -385,7 +392,7 @@ body{
     justify-content: space-between; /* Space between name and links */
     align-items: center; /* Vertically align items */
     font-family: 'Courier New', Courier, monospace;
-    height: 6vh;
+    height: 5%;
     color: whitesmoke;
 }
 
@@ -401,66 +408,58 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50vh;
-    height: 65vh;
+    width: 30%;
+    height: 75%;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 7.5%;
     background-color: #d2d8d6;
-background-image: linear-gradient(315deg, #d2d8d6 0%, #dce8e0 74%);
-
+    background-image: linear-gradient(315deg, #d2d8d6 0%, #dce8e0 74%);
 }
 
 @media screen and (max-width: 1000px) {
     .ContactMe {
-        width: 100%;
-        border-radius: 0%;
+        width: 100%; /* Adjusted for better responsiveness */
+        border-radius: 0px; /* Changed for consistency */
     }
-    
 }
 
-
-.ContactMe h1{
+.ContactMe h1 {
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 20px; /* Added some space below the header */
 }
 
-.ContactMe input{
-    width: 60%;
-    display: block;
+.ContactMe input, .ContactMe textarea, .ContactMe button {
+    width: 90%; /* Adjusted for better fit */
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 8px auto; /* Updated margin to auto for horizontal centering */
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 4px;
     font-size: 1rem;
     font-weight: bolder;
+    display: block; /* Ensure elements are block-level for margin auto to work */
 }
 
-.ContactMe textarea{
-    width: 60%;
-    display: block;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid black;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-weight: bolder;
-}
-.ContactMe button{
+
+.ContactMe button {
     background: none;
-    padding: 20px 20px;
-    border: none;
+    padding: 12px 20px; /* Adjusted padding */
+    border: 2px solid black; /* Added border */
+    border-radius: 4px; /* Added border radius */
     cursor: pointer;
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* Adjusted font size */
     font-weight: bold;
+    transition: all 0.3s; /* Added transition for hover effect */
 }
 
-.ContactMe button:hover{
+.ContactMe button:hover {
     color: darkblue;
+    background-color: #f0f0f0; /* Added background color on hover */
 }
+
 
 span{
     color: red;
@@ -669,8 +668,10 @@ nav ul li a {
 
 @media (max-width: 1000px) {
     .photoGrid img {
-        width: 95vh;
-        height: 30vh;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0%;
+        padding: 0 0;
     }
     
 }
