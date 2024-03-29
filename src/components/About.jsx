@@ -11,7 +11,7 @@ export default function About() {
                 <img src={reactImg} alt="Pranay Netha" />
                 <div className="aboutme">
                     <h1>About Me</h1>
-                    <p>Hi, I'm Pranay Netha. I'm a full stack developer with a passion for web development. I have experience with React, Node.js, Express, and MongoDB. I'm always looking to learn new technologies and improve my skills. I'm currently looking for new opportunities, so feel free to contact me if you have any questions or would like to work together.</p>
+                    <p>Hello! I'm Pranay Netha, a full-stack developer with a zest for crafting digital experiences. I develop web applications using React, work with deep learning algorithms in TensorFlow, and apply C++ OOPs concepts to create efficient solutions. But that's not all - I'm also a coffee connoisseur, sipping inspiration from every cup. My passion for technology is matched only by my curiosity to explore new horizons. I'm on the lookout for opportunities that challenge me, collaborations that excite me, and conversations that enlighten me. If you're in search of a developer with a creative spark and a drive for innovation, you've come to the right place. Let's brew some ideas together!</p>
                 </div>
             </div>
 
