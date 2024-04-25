@@ -1,4 +1,4 @@
-import resumefile from '/GudaPranayNetha_Resume.pdf';
+import resumefile from '/PranayGudaResume-pdf.pdf';
 export default function Resume() {
     return (
 
@@ -62,10 +62,12 @@ export default function Resume() {
     </div>
     <div class="experience-item">
         <h3>Tata Consultancy Services TCS, Hyderabad, India</h3>
-        <p>Intern | March 2022 - May 2022</p>
+        <p>Intern | May 2021 - May 2022</p>
         <ul>
-            <li>Developed a Python script to efficiently parse diagnostic information and diagnostic trouble codes from extensive automobile logs, enhancing data analysis capabilities for the team.</li>
-            <li>Designed and implemented a robust parsing architecture to extract crucial information from CSV files, improving data processing efficiency by 30%.</li>
+            <li>Led the design and development of a feature-rich, interactive web application for real-time vehicle diagnostics, utilizing HTML, CSS, JavaScript, and React.</li>
+            <li>Enhanced user experience by implementing responsive web design principles, ensuring seamless functionality across various devices and platforms.</li>
+            <li>Collaborated with backend developers to integrate RESTful APIs, significantly improving data retrieval efficiency and system scalability. </li>
+
         </ul>
     </div>
 </section>
