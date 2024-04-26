@@ -11,7 +11,7 @@ import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/Pranay-Netha-Guda',
     element: <App />,
     children: [
       { path: '', element: <About /> },
