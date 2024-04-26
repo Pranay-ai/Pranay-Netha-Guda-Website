@@ -24,7 +24,6 @@ return (
             <PhotoCard photo={photo2}></PhotoCard>
             <PhotoCard photo={photo3}></PhotoCard>
             <PhotoCard photo={photo5}></PhotoCard>
-            {/* <PhotoCard photo={photo6}></PhotoCard> */}
             <PhotoCard photo={photo7}></PhotoCard>
             <PhotoCard photo={photo8}></PhotoCard>
             <PhotoCard photo={photo9}></PhotoCard>

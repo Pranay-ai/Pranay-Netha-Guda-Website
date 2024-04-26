@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import { NavLink } from 'react-router-dom';
 
-export default function NavBar({ handleSection }) {
+export default function NavBar() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1000);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,8 +17,7 @@ export default function NavBar({ handleSection }) {
         };
     }, []);
 
-    function handleClick(section) {
-        handleSection(section);
+    function handleClick() {
         setIsMenuOpen(false); // Close menu after selection on mobile
     }
 
@@ -32,11 +32,11 @@ export default function NavBar({ handleSection }) {
             {isMenuOpen && (
                 <div className="mobileMenu">
                     <ul>
-                        <li><button onClick={() => handleClick('About')}>About Me</button></li>
-                        <li><button onClick={() => handleClick('Project')}>Projects</button></li>
-                        <li><button onClick={() => handleClick('Contacts')}>Contact</button></li>
-                        <li><button onClick={() => handleClick('Resume')}>Resume</button></li>
-                        <li><button onClick={() => handleClick('MyPhotography')}>My Photography</button></li>
+                        <li><button onClick={()=>handleClick()}><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={""}>About Me</NavLink>  </button></li>
+                        <li><button onClick={()=>handleClick()}><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/project"}> Projects</NavLink> </button></li>
+                        <li><button onClick={()=>handleClick()}><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/contact"}>  Contact</NavLink></button></li>
+                        <li><button onClick={()=>handleClick()}><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/resume"}> Resume</NavLink> </button></li>
+                        <li><button onClick={()=>handleClick()}><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/myphotography"}>  My Photography</NavLink>  </button></li>
                     </ul>
                 </div>
             )}
@@ -47,11 +47,11 @@ export default function NavBar({ handleSection }) {
         <nav className="desktopNavBar">
             <p>Pranay Netha Guda</p>
             <ul>
-                <li><button onClick={() => handleClick('About')}>About Me</button></li>
-                <li><button onClick={() => handleClick('Project')}>Projects</button></li>
-                <li><button onClick={() => handleClick('Contacts')}>Contact</button></li>
-                <li><button onClick={() => handleClick('Resume')}>Resume</button></li>
-                <li><button onClick={() => handleClick('MyPhotography')}>My Photography</button></li>
+                <li><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={""}>About Me</NavLink>  </li>
+                <li><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/project"}> Projects</NavLink> </li>
+                <li><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/contact"}>  Contact</NavLink></li>
+                <li><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/resume"}> Resume</NavLink> </li>
+                <li><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/myphotography"}>  My Photography</NavLink>  </li>
             </ul>
         </nav>
     );
