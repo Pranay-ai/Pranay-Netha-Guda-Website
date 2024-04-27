@@ -30,7 +30,7 @@ function handleClick(direction) {
     }, 600); // Adjust timing based on your transition duration
 }
     return (
-        <>
+
         <div className="ProjectDiv">
         <h1>PROJECTS</h1>
         <div className='ProjectSection'>
@@ -43,8 +43,7 @@ function handleClick(direction) {
            
         </div>
         </div>
-        
-        </>
+
 
     )
 

@@ -13,9 +13,18 @@ body{
 
 }
 
+#navBar{
+    height: 15%;
+}
 
-/* Base styles */
-/* Base styles for desktop */
+#root{
+    height: 75%;
+}
+#footer{
+    height: 10%
+}
+
+/* Nav Bar starts Here */
 .desktopNavBar {
     background: linear-gradient(to right, #f9d4da, #d7e8f9);
     padding: 20px;
@@ -24,7 +33,6 @@ body{
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    height: 15%;
 }
 
 .desktopNavBar p {
@@ -75,7 +83,6 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    height: 10%;
 }
 
 .photoCard {
@@ -141,16 +148,17 @@ body{
     text-decoration: underline;
 }
 
+/* Nav Bar Ends Here */
 
 
-
+/* AbOut Sections Starts Here */
 .AboutSection{
     background: linear-gradient(135deg, #c7a9e9, #a1c4fd);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: space-between;
-    height: 75%;
+    height: 100vh;
 }
 .About {
     display: flex;
@@ -221,35 +229,7 @@ body{
 
 
 /* Adjustments for very small screens */
-@media (max-width: 1000px) {
-    .About {
-        display: flex;
-        flex-direction: column; /* Stack elements vertically on small screens */
-        align-items: center; /* Center-align items for a neat look */
-        padding: 5%; /* Adjust padding for smaller screens */
-        
-    }
-    .About img {
-        width: 90%;
-    }
 
-    .aboutme p {
-        font-size: 1.2rem; /* Adjust text size for readability on small devices */
-    }
-    .AboutSection{
-        height: fit-content;
-    }
-    .aboutme{
-        width: 100%;
-    }
-    .WebsiteLinks{
-        width: 100%;
-        font-size: 0.8rem;
-        display: flex;
-        flex-direction: column;
-    }
-    
-}
 
 
 
@@ -260,12 +240,12 @@ body{
     display: flex;
     flex-direction: column;
     align-items:center;
-    /* border: 5px solid black; */
-    /* border: solid black 2px; */
     padding: 30px 30px;
     width: 60%;
     border-radius: 10%;
     background-color: #e6cfff;
+    min-height: 80vh;
+    height: fit-content;
 }
 
 .ProjectCard img{
@@ -286,8 +266,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
     padding: 30px 30px;
+    width: 100%;
+    height: 50vh;
 }
 
 .ProjectDiv {
@@ -296,6 +277,7 @@ body{
     flex-direction: column;
     background-color: #44b09e;
     background: linear-gradient(135deg, #c7a9e9, #a1c4fd);
+    min-height: 120vh;
     height: fit-content;
 }
 
@@ -330,85 +312,6 @@ body{
     height: 75%;
     cursor: pointer;
 }
-/* Base styles for larger screens remain unchanged */
-
-/* Responsive adjustments for screens less than 1000px */
-@media (max-width: 700px) {
-    .ProjectCard {
-        width:100%; /* Adjust width for smaller screens */
-        padding: 15px 15px; /* Adjust padding for a tighter layout */
-        margin: 10px 0; /* Add margin for spacing between cards */
-        border-radius: 0%;
-    }
-
-    .ProjectCard h1{
-        font-size: 10px;
-    }
-
-    .ProjectCard img {
-        width: 150px; /* Adjust image size for smaller screens */
-        height: 100px;
-        padding: 10px 10px; /* Adjust image padding */
-    }
-
-    .ProjectCard p {
-        font-size: 1rem; /* Adjust font size for better readability */
-    }
-
-    .ProjectSection {
-        display: flex;
-        flex-direction: column; /* Stack project cards vertically */
-        align-items: center; /* Center align the cards for consistency */
-        flex-wrap: nowrap;
-
-    }
-    .ArrowSection {
-        display: flex;
-        flex-direction: row; /* Stack project cards vertically */
-        align-items: center; /* Center align the cards for consistency */
-        justify-content: space-between;
-    }
-
-    .ProjectDiv {
-        padding: 0 5%; /* Adjust overall section padding */
-        height: fit-content;
-    }
-
-    .ProjectDiv h1 {
-        font-size: 2rem; /* Adjust heading font size for smaller screens */
-    }
-
-    .Arrow {
-        height: 70px; /* Adjust arrow icon size */
-        width: 140px;
-    }
-
-    .BtnArrow {
-        margin: 5px 0; /* Adjust margin around navigation buttons for easier interaction */
-    }
-
-    .Mirror {
-        transform: scaleX(-1); /* Ensure arrow flipping is consistent */
-    }
-
-    .BtnArrow.hidden, .BtnArrow:disabled {
-        opacity: 0.5; /* Adjust the opacity to indicate non-interactivity */
-        cursor: not-allowed; /* Change cursor to indicate disabled state */
-    }
-
-
-}
-@media (max-width: 450px) {
-    .ProjectCard {
-        width:100%; /* Adjust width for smaller screens */
-        /* padding: 15px 15px; Adjust padding for a tighter layout */
-        margin: 10px 0; /* Add margin for spacing between cards */
-    }
-    .ProjectDiv {
-        padding: 0 0%; /* Adjust overall section padding */
-    }
-
-}
 
 .Footer{
     /* background: linear-gradient(135deg, #c7a9e9, #a1c4fd); */
@@ -418,7 +321,6 @@ body{
     justify-content: space-between; /* Space between name and links */
     align-items: center; /* Vertically align items */
     font-family: 'Courier New', Courier, monospace;
-    height: 10%;
     color: whitesmoke;
 }
 
@@ -426,9 +328,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;    
-    height: 75%; /* Adjust as needed */
     background: linear-gradient(135deg, #c7a9e9, #a1c4fd);
     padding: 50px;
+    height: 100vh;
 }
 
 .ContactMe {
@@ -436,20 +338,16 @@ body{
     flex-direction: column;
     align-items: center;
     width: 30%;
-    height: 100%;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 7.5%;
     background-color: #d2d8d6;
     background-image: linear-gradient(315deg, #d2d8d6 0%, #dce8e0 74%);
+    min-height: 60vh;
+    max-height: 100vh;
 }
 
-@media screen and (max-width: 1000px) {
-    .ContactMe {
-        width: 100%; /* Adjusted for better responsiveness */
-        border-radius: 0px; /* Changed for consistency */
-    }
-}
+
 
 .ContactMe h1 {
     font-size: 2.5rem;
@@ -516,12 +414,7 @@ span{
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-@media screen and (max-width: 1000px) {
-    .container {
-        max-width: 90%;
-    }
-    
-}
+
 
 header {
     text-align: center;
@@ -637,7 +530,6 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 87vh; */
     background: linear-gradient(135deg, #c7a9e9, #a1c4fd);
 }
 
@@ -660,8 +552,8 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 87vh; */
     background: linear-gradient(135deg, #c7a9e9, #a1c4fd);
+    height: fit-content;
 }
 
 .photoSection h1{
@@ -673,18 +565,12 @@ nav ul li a {
 
 .photoGrid{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
     padding: 30px;
 }
 
-@media screen and (max-width: 1000px) {
-    .photoGrid {
-        grid-template-columns: repeat(1, 1fr);
-        padding: 0 0;
-    }
-    
-}
+
 
 .photoGrid img{
     width: 800px;
@@ -695,6 +581,105 @@ nav ul li a {
 }
 
 @media (max-width: 1000px) {
+
+    .About {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center; /* Center-align items for a neat look */
+        padding: 5%; /* Adjust padding for smaller screens */
+        
+    }
+    .photoGrid {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 0;
+    }
+    .About img {
+        width: 90%;
+    }
+
+    .aboutme p {
+        font-size: 1.2rem; /* Adjust text size for readability on small devices */
+    }
+    .AboutSection{
+        height: fit-content;
+    }
+    .aboutme{
+        width: 100%;
+    }
+    .WebsiteLinks{
+        width: 100%;
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .ProjectCard {
+        width:100%; /* Adjust width for smaller screens */
+        padding: 15px 15px; /* Adjust padding for a tighter layout */
+        margin: 10px 0; /* Add margin for spacing between cards */
+        border-radius: 0%;
+    }
+
+    .ProjectCard h1{
+        font-size: 10px;
+    }
+
+    .ProjectCard img {
+        width: 150px; /* Adjust image size for smaller screens */
+        height: 100px;
+        padding: 10px 10px; /* Adjust image padding */
+    }
+
+    .ProjectCard p {
+        font-size: 1rem; /* Adjust font size for better readability */
+    }
+
+    .ProjectSection {
+        display: flex;
+        flex-direction: column; /* Stack project cards vertically */
+        align-items: center; /* Center align the cards for consistency */
+        flex-wrap: nowrap;
+
+    }
+    .ArrowSection {
+        display: flex;
+        flex-direction: row; /* Stack project cards vertically */
+        align-items: center; /* Center align the cards for consistency */
+        justify-content: space-between;
+    }
+
+    .ProjectDiv {
+        padding: 0 5%; /* Adjust overall section padding */
+        height: fit-content;
+    }
+
+    .ProjectDiv h1 {
+        font-size: 2rem; /* Adjust heading font size for smaller screens */
+    }
+
+    .Arrow {
+        height: 70px; /* Adjust arrow icon size */
+        width: 140px;
+    }
+
+    .BtnArrow {
+        margin: 5px 0; /* Adjust margin around navigation buttons for easier interaction */
+    }
+
+    .Mirror {
+        transform: scaleX(-1); /* Ensure arrow flipping is consistent */
+    }
+
+    .BtnArrow.hidden, .BtnArrow:disabled {
+        opacity: 0.5; /* Adjust the opacity to indicate non-interactivity */
+        cursor: not-allowed; /* Change cursor to indicate disabled state */
+    }
+    .ContactMe {
+        width: 100%; /* Adjusted for better responsiveness */
+        border-radius: 0px; /* Changed for consistency */
+    }
+    .container {
+        max-width: 90%;
+    }
     .photoGrid img {
         width: 100%;
         height: 300px;
@@ -702,6 +687,18 @@ nav ul li a {
         border-radius: 0%;
         padding: 0 0;
     }
-    
+
+}
+
+@media (max-width: 450px) {
+    .ProjectCard {
+        width:100%; /* Adjust width for smaller screens */
+        /* padding: 15px 15px; Adjust padding for a tighter layout */
+        margin: 10px 0; /* Add margin for spacing between cards */
+    }
+    .ProjectDiv {
+        padding: 0 0%; /* Adjust overall section padding */
+    }
+
 }
 
