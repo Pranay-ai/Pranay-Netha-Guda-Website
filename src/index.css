@@ -1,30 +1,27 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
 body{
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
     box-sizing: border-box;
     background-color: #a3a3a3;
-
-
-
-}
-
-#navBar{
-    height: 15%;
 }
 
 #root{
-    height: 75%;
-}
-#footer{
-    height: 10%
+    height: 80%;
+    background: linear-gradient(135deg, #c7a9e9, #a1c4fd);
+    padding-top: 30px;
+    padding-bottom: 40px;
 }
 
-/* Nav Bar starts Here */
+#navBar{
+    height: 10%;
+}
+
+#footer{
+    height: 10%;
+    max-height: 20px;
+}
+/* ..................................................................Nav Bar......................................................................... */
 .desktopNavBar {
     background: linear-gradient(to right, #f9d4da, #d7e8f9);
     padding: 20px;
@@ -60,7 +57,8 @@ body{
 }
 
 .active{
-    background-color: aliceblue;
+    background-color: rgb(252, 252, 252);
+    color: black;
 }
 
 .desktopNavBar button:hover {
@@ -83,10 +81,6 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-}
-
-.photoCard {
-    width: 40%;
 }
 
 .menuToggle {
@@ -144,22 +138,29 @@ body{
     font-size: large;
 }
 
+.mobileMenu a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+
+}
+
 .mobileMenu button:hover {
     text-decoration: underline;
 }
+/* ..................................................................Nav Bar End......................................................................... */
 
-/* Nav Bar Ends Here */
-
-
-/* AbOut Sections Starts Here */
+/* ..................................................................About Section......................................................................... */
 .AboutSection{
-    background: linear-gradient(135deg, #c7a9e9, #a1c4fd);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: space-between;
-    height: 100vh;
+    height: fit-content;
 }
+
 .About {
     display: flex;
     flex-direction: row; /* Stack elements vertically on small screens */
@@ -178,26 +179,24 @@ body{
     box-shadow: 0 2px 5px rgba(129, 52, 52, 0.15);
 }
 
-
 .aboutme, .WebsiteLinks {
-    /* width: 100%; Utilize full width for better readability */
     text-align: center; /* Center-align text for consistency */
 }
 
 .aboutme p {
     font-size: 1.5rem; /* Adjust text size for readability */
     font-weight: bold; /* Emphasize text */
+    margin:10px 0;
 
 }
 
-.aboutme p, .aboutme h1, .WebsiteLinks a {
+.aboutme h1, .WebsiteLinks a {
     margin: 10px 0; /* Add some vertical spacing */
 }
 
 .aboutme{
     width: 50%;
 }
-
 .WebsiteLinks {
     display: flex; /* Use flexbox for layout */
     flex-direction: row; /* Stack links vertically */
@@ -227,103 +226,110 @@ body{
     margin-right: 10px; /* Space between icon and text */
 }
 
+@media ( max-width: 720px){
+    .About{
+        flex-direction: column;
+    }
+    .aboutme{
+        width: 100%;  
+    }
+    .aboutme p {
+        font-size: 1.2rem; 
+    }
+    .About img{
+        width: 90%;
+    }
+    .WebsiteLinks{
+        width: 100%;
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
 
-/* Adjustments for very small screens */
+/* ..................................................................About Section End......................................................................... */
 
+/* ..................................................................Project Section............................................................................ */
 
-
-
-
-
-
-.ProjectCard {
+.ProjectCard{
     display: flex;
     flex-direction: column;
-    align-items:center;
-    padding: 30px 30px;
-    width: 60%;
-    border-radius: 10%;
-    background-color: #e6cfff;
-    min-height: 80vh;
-    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 20px;
+    background-color: #f9d4da;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    width: 40%;
+    height: 70%;
 }
 
 .ProjectCard img{
-    width: 200px;
-    height: 130px;
-    border-radius: 15%;
-
-    padding: 20px 20px;
-    box-shadow: 0 2px 5px rgba(129, 52, 52, 0.15);
-}
-.ProjectCard p{
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
 }
 
 .ProjectSection{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+.projectItem {
+    cursor: pointer;
+    display: flex;
     align-items: center;
-    padding: 30px 30px;
-    width: 100%;
-    height: 50vh;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.ProjectDiv {
-    padding: 0 3% 0 3%;
+.projectItem img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.projectItem h1 {
+    font-size: 1.25em;
+    color: #333;
+    margin: 0;
+}
+
+.projectItem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.hidden {
+    display: none;
+}
+.mobileProject{
     display: flex;
     flex-direction: column;
-    background-color: #44b09e;
-    background: linear-gradient(135deg, #c7a9e9, #a1c4fd);
-    min-height: 120vh;
-    height: fit-content;
+    align-items: center;
+    padding: 4px;
+    margin: 3px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.mobileprojectList{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
 }
 
-.ProjectDiv h1{
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-
-.Arrow {
-    height: 100px;
-    width: 200px;
-    opacity: 0.5;
-}
-.Mirror{
-    transform: scaleX(-1);
-}
-
-.BtnArrow{
-   background: none;
-    border: none;
-}
-
-.hidden{
-    opacity: 0;
-}
-
-.ProjectSection button{
-    background: none;
-    border: none;
-    height: 75%;
-    cursor: pointer;
-}
-
-.Footer{
-    /* background: linear-gradient(135deg, #c7a9e9, #a1c4fd); */
-    /* padding: 20px; */
-    padding: 0 2% 0 2%;
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between name and links */
-    align-items: center; /* Vertically align items */
-    font-family: 'Courier New', Courier, monospace;
-    color: whitesmoke;
-}
-
+/* ..........................................................Contact Me.......................................................................... */
 .ContactSection {
     display: flex;
     justify-content: center;
@@ -340,7 +346,7 @@ body{
     width: 30%;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 7.5%;
+    border-radius: 2.5%;
     background-color: #d2d8d6;
     background-image: linear-gradient(315deg, #d2d8d6 0%, #dce8e0 74%);
     min-height: 60vh;
@@ -385,37 +391,32 @@ body{
     background-color: #f0f0f0; /* Added background color on hover */
 }
 
-
-span{
-    color: red;
-}
-
-
-
-.animated {
-    animation: slideIn 0.6s ease; /* Adjust timing based on your animation */
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
+@media (max-width: 720px) {
+    .ContactMe {
+        width: 100%; /* Adjusted for better responsiveness */
+        border-radius: 0px; /* Changed for consistency */
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .ContactSection {
+        padding:0 20px 0 20px; /* Adjusted padding for better fit */
     }
 }
 
-.container {
-    max-width: 50%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* ..........................................................Contact Me End.......................................................................... */
+
+/* ..........................................................Footer.................................................................................. */
+.Footer{
+    /* background: linear-gradient(135deg, #c7a9e9, #a1c4fd); */
+    /* padding: 20px; */
+    padding: 0 2% 0 2%;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between name and links */
+    align-items: center; /* Vertically align items */
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
 }
+/* .........................................................Footer End................................................................................. */
 
-
+/* .........................................................Resume.................................................................................. */
 header {
     text-align: center;
     margin-bottom: 20px;
@@ -546,6 +547,23 @@ nav ul li a {
 .download-button:hover {
     background-color: #0056b3;
 }
+.container {
+    max-width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 720px) {
+    .container {
+        max-width: 93%;
+    }
+}
+
+/* .........................................................Resume End................................................................................. */
+
+/* ..........................................................Photography Section.......................................................................... */
 
 .photoSection {
     display: flex;
@@ -565,7 +583,7 @@ nav ul li a {
 
 .photoGrid{
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     padding: 30px;
 }
@@ -580,125 +598,15 @@ nav ul li a {
     box-shadow: 0 2px 5px rgba(129, 52, 52, 0.15);
 }
 
-@media (max-width: 1000px) {
-
-    .About {
-        display: flex;
-        flex-direction: column; /* Stack elements vertically on small screens */
-        align-items: center; /* Center-align items for a neat look */
-        padding: 5%; /* Adjust padding for smaller screens */
-        
-    }
-    .photoGrid {
+@media (max-width: 1000px){
+    .photoGrid{
         grid-template-columns: repeat(1, 1fr);
-        padding: 0 0;
-    }
-    .About img {
-        width: 90%;
-    }
-
-    .aboutme p {
-        font-size: 1.2rem; /* Adjust text size for readability on small devices */
-    }
-    .AboutSection{
-        height: fit-content;
-    }
-    .aboutme{
-        width: 100%;
-    }
-    .WebsiteLinks{
-        width: 100%;
-        font-size: 0.8rem;
-        display: flex;
-        flex-direction: column;
-    }
-    .ProjectCard {
-        width:100%; /* Adjust width for smaller screens */
-        padding: 15px 15px; /* Adjust padding for a tighter layout */
-        margin: 10px 0; /* Add margin for spacing between cards */
-        border-radius: 0%;
-    }
-
-    .ProjectCard h1{
-        font-size: 10px;
-    }
-
-    .ProjectCard img {
-        width: 150px; /* Adjust image size for smaller screens */
-        height: 100px;
-        padding: 10px 10px; /* Adjust image padding */
-    }
-
-    .ProjectCard p {
-        font-size: 1rem; /* Adjust font size for better readability */
-    }
-
-    .ProjectSection {
-        display: flex;
-        flex-direction: column; /* Stack project cards vertically */
-        align-items: center; /* Center align the cards for consistency */
-        flex-wrap: nowrap;
-
-    }
-    .ArrowSection {
-        display: flex;
-        flex-direction: row; /* Stack project cards vertically */
-        align-items: center; /* Center align the cards for consistency */
-        justify-content: space-between;
-    }
-
-    .ProjectDiv {
-        padding: 0 5%; /* Adjust overall section padding */
-        height: fit-content;
-    }
-
-    .ProjectDiv h1 {
-        font-size: 2rem; /* Adjust heading font size for smaller screens */
-    }
-
-    .Arrow {
-        height: 70px; /* Adjust arrow icon size */
-        width: 140px;
-    }
-
-    .BtnArrow {
-        margin: 5px 0; /* Adjust margin around navigation buttons for easier interaction */
-    }
-
-    .Mirror {
-        transform: scaleX(-1); /* Ensure arrow flipping is consistent */
-    }
-
-    .BtnArrow.hidden, .BtnArrow:disabled {
-        opacity: 0.5; /* Adjust the opacity to indicate non-interactivity */
-        cursor: not-allowed; /* Change cursor to indicate disabled state */
-    }
-    .ContactMe {
-        width: 100%; /* Adjusted for better responsiveness */
-        border-radius: 0px; /* Changed for consistency */
-    }
-    .container {
-        max-width: 90%;
     }
     .photoGrid img {
         width: 100%;
-        height: 300px;
+        height: auto;
         box-shadow: none;
         border-radius: 0%;
         padding: 0 0;
     }
-
 }
-
-@media (max-width: 450px) {
-    .ProjectCard {
-        width:100%; /* Adjust width for smaller screens */
-        /* padding: 15px 15px; Adjust padding for a tighter layout */
-        margin: 10px 0; /* Add margin for spacing between cards */
-    }
-    .ProjectDiv {
-        padding: 0 0%; /* Adjust overall section padding */
-    }
-
-}
-

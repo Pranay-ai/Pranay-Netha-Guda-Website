@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { NavLink } from 'react-router-dom';
 
 export default function NavBar() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 1000);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 740);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
@@ -32,11 +32,11 @@ export default function NavBar() {
             {isMenuOpen && (
                 <div className="mobileMenu">
                     <ul>
-                        <li><button onClick={()=>handleClick()}><NavLink end={true} className={({isActive})=> isActive ? 'active': ''}     to={""}>About Me</NavLink>  </button></li>
-                        <li><button onClick={()=>handleClick()}><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/Pranay-Netha-Guda/project"}> Projects</NavLink> </button></li>
-                        <li><button onClick={()=>handleClick()}><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/Pranay-Netha-Guda/contact"}>  Contact</NavLink></button></li>
-                        <li><button onClick={()=>handleClick()}><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/Pranay-Netha-Guda/resume"}> Resume</NavLink> </button></li>
-                        <li><button onClick={()=>handleClick()}><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/Pranay-Netha-Guda/myphotography"}>  My Photography</NavLink>  </button></li>
+            <li><button onClick={()=>handleClick()}><NavLink end={true} className={({isActive})=> isActive ? 'active': ''}       to={""}>About Me</NavLink>  </button></li>
+                        <li><button onClick={()=>handleClick()}><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"project"}> Projects</NavLink> </button></li>
+                        <li><button onClick={()=>handleClick()}><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"contact"}>  Contact</NavLink></button></li>
+                        <li><button onClick={()=>handleClick()}><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"resume"}> Resume</NavLink> </button></li>
+                        <li><button onClick={()=>handleClick()}><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"myphotography"}>  My Photography</NavLink>  </button></li>
                     </ul>
                 </div>
             )}
@@ -47,11 +47,11 @@ export default function NavBar() {
         <nav className="desktopNavBar">
             <p>Pranay Netha Guda</p>
             <ul>
-                <li><NavLink end={true}  className={({isActive})=> isActive ? 'active': ''}     to={"/Pranay-Netha-Guda"}>About Me</NavLink>  </li>
-                <li><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/Pranay-Netha-Guda/project"}> Projects</NavLink> </li>
-                <li><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/Pranay-Netha-Guda/contact"}>  Contact</NavLink></li>
-                <li><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/Pranay-Netha-Guda/resume"}> Resume</NavLink> </li>
-                <li><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"/Pranay-Netha-Guda/myphotography"}>  My Photography</NavLink>  </li>
+    <li><NavLink end={true}  className={({isActive})=> isActive ? 'active': ''}      to={""}>About Me</NavLink>  </li>
+                <li><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"project"}> Projects</NavLink> </li>
+                <li><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"contact"}>  Contact</NavLink></li>
+                <li><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"resume"}> Resume</NavLink> </li>
+                <li><NavLink  className={({isActive})=> isActive ? 'active': ''}     to={"myphotography"}>  My Photography</NavLink>  </li>
             </ul>
         </nav>
     );
