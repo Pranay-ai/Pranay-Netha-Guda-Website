@@ -1,7 +1,8 @@
-export default function PhotoCard({photo}) {
+export default function PhotoCard({ photo }) {
     return (
-        <div className="photoCard">
-            <img src={photo} alt="" />
-        </div>
-    )
-}
+      <div className="w-full h-auto p-2">
+        <img src={photo} alt="" className="w-full h-auto rounded-lg shadow-lg" />
+      </div>
+    );
+  }
+  

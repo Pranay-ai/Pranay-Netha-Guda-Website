@@ -18,30 +18,51 @@ export default function ContactMe() {
             email_user: "gudapranaynetha@gmail.com",
             reply_to: e.target.email.value,
         }, '9333Ud1MPxOCys7Gn')
-        .then((result) => {
-            console.log('Email sent:', result.text);
-        }, (error) => {
-            console.log('Email error:', error.text);
-        });
+            .then((result) => {
+                console.log('Email sent:', result.text);
+            }, (error) => {
+                console.log('Email error:', error.text);
+            });
     }
 
     return (
-        <div className="ContactSection">
-            <div className="ContactMe">
-                {nameField !== "NoName" ? (
-                    <>
-                        <h1>Thank You {nameField}!</h1>
-                    </>
-                ) : (
-                    <form onSubmit={handleSubmit}>
-                        <h1>Ping Me!</h1>
-                        <input type="text" placeholder="Name" name="name" />
-                        <input type="email" placeholder="Email" name="email" />
-                        <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
-                        <button type="submit">Send</button>
-                    </form>
-                )}
-            </div>
+        <div className="h-screen flex items-center justify-center ">
+            {nameField !== "NoName" ? (
+                <h1 className="text-2xl font-bold">Thank You {nameField}!</h1>
+            ) : (
+                <form onSubmit={handleSubmit} className="flex flex-col h-fit md:h-2/3 items-center gap-4 p-6 justify-evenly bg-white shadow-lg rounded-md w-96">
+                    <h1 className="text-3xl font-bold">Ping Me!</h1>
+                    <input
+                        type="text"
+                        placeholder="Name"
+                        name="name"
+                        className="w-full p-2 border border-gray-300 rounded-md"
+                        required
+                    />
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        name="email"
+                        className="w-full p-2 border border-gray-300 rounded-md"
+                        required
+                    />
+                    <textarea
+                        name="message"
+                        cols="30"
+                        rows="5"
+                        placeholder="Message"
+                        className="w-full p-2 border border-gray-300 rounded-md"
+                        required
+                    ></textarea>
+                    <button
+                        type="submit"
+                        className="w-full p-2 bg-green-300 text-black font-bold rounded-md hover:bg-dark-sage-green"
+                    >
+                        Send
+                    </button>
+                </form>
+            )}
         </div>
     );
 }
+
