@@ -30,7 +30,10 @@ export default function ContactMe() {
             {nameField !== "NoName" ? (
                 <h1 className="text-2xl font-bold">Thank You {nameField}!</h1>
             ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col h-fit md:h-2/3 items-center gap-4 p-6 justify-evenly bg-white shadow-lg rounded-md w-96">
+
+                    
+                    <form onSubmit={handleSubmit} className="flex flex-col  items-center gap-4 p-6 h-fit md:h-2/3 justify-center    bg-slate-100 shadow-lg rounded-md w-96">
+                    <div className="flex flex-col gap-3 justify-center items-center"> 
                     <h1 className="text-3xl font-bold">Ping Me!</h1>
                     <input
                         type="text"
@@ -60,7 +63,10 @@ export default function ContactMe() {
                     >
                         Send
                     </button>
+                    </div>
+                    
                 </form>
+                
             )}
         </div>
     );

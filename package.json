@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Pranay-ai.github.io/Pranay-Netha-Guda-Website",
+  "homepage": "https://Pranay-ai.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
